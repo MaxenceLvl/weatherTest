@@ -6,15 +6,15 @@ import kotlinx.serialization.Serializable
 data class WeatherResult(
     val weather: List<Weather>? = null,
 //    val base: String? = null,
-//    val main: Main? = null,
+    val main: Main? = null,
 //    val visibility: Long? = null,
 //    val wind: Wind? = null,
 //    val clouds: Clouds? = null,
 //    val dt: Long? = null,
-//    val sys: Sys? = null,
+    val sys: Sys? = null,
 //    val timezone: Long? = null,
 //    val id: Long? = null,
-//    val name: String? = null,
+    val name: String? = null,
 //    val cod: Long? = null
 )
 
@@ -27,6 +27,7 @@ data class Coord(
     val lat: Long? = null
 )
 
+@Serializable
 data class Main(
     val temp: Double? = null,
     val feelsLike: Double? = null,
@@ -38,6 +39,7 @@ data class Main(
     val grndLevel: Long? = null
 )
 
+@Serializable
 data class Sys(
     val type: Long? = null,
     val id: Long? = null,

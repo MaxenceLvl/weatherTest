@@ -51,6 +51,7 @@ dependencies {
     implementation "androidx.core:core-ktx:1.7.0"
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
     implementation "androidx.activity:activity-compose:1.4.0"
@@ -60,6 +61,7 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "androidx.activity:activity-compose:1.4.0"
 
     implementation "androidx.navigation:navigation-compose:2.5.0-beta01"
 
@@ -71,17 +73,12 @@ dependencies {
     implementation "io.ktor:ktor-client-android:1.6.7"
     implementation "io.ktor:ktor-client-serialization:1.6.7"
     implementation "io.ktor:ktor-client-logging:1.6.5"
-    implementation "ch.qos.logback:logback-classic:1.2.6"
 
     // viewmodel compose
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+    implementation "io.coil-kt:coil-compose:1.4.0"
 
     // coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
-
-    implementation "com.google.android.libraries.maps:maps:3.1.0-beta"
-    implementation "com.google.maps.android:maps-v3-ktx:3.1.0"
-    implementation "com.google.android.libraries.maps:maps:3.1.0-beta"
-    implementation "com.android.volley:volley:1.2.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
 }

@@ -10,9 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -20,6 +18,7 @@ import com.maxence.weatherapp.ui.theme.WeatherAppTheme
 
 class MainActivity : ComponentActivity() {
 
+    private lateinit var viewModel : WeatherViewModel
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted ->
@@ -29,8 +28,6 @@ class MainActivity : ComponentActivity() {
             Log.i("Weather", "Permission denied")
         }
     }
-
-    private lateinit var viewModel : WeatherViewModel
 
     private fun requestLocationPermission() {
         when {
@@ -66,13 +63,5 @@ class MainActivity : ComponentActivity() {
             }
         }
         requestLocationPermission()
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    WeatherAppTheme {
-
     }
 }

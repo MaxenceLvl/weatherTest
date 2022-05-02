@@ -21,7 +21,7 @@ class WeatherApiService: ApiService {
     }
 
     override suspend fun getWeather(search: String): WeatherResult {
-        return client.get("https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        return client.get("https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=906fc0c81c648df2e5121d1ba24f3ece&units=metric")
     }
 }
 
